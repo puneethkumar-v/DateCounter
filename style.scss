@@ -1,0 +1,67 @@
+@import "flex.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  @include flex;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(92, 66, 170);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  @include flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 2rem;
+    margin: 2rem;
+    text-align: center;
+  }
+
+  .main {
+    @include flex;
+    width: 80%;
+    height: auto;
+    flex-wrap: wrap;
+
+    .content {
+      padding: 1.5rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      span {
+        font-weight: bold;
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 20px;
+  }
+  span {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
